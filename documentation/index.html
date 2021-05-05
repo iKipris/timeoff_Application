@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documentation For PICKME</title>
+
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+
+<body>
+<!--Page Wrapper-->
+<div class="page-wrapper">
+
+    <!--Sidebar-->
+    <aside id="sidebar">
+
+        <!--Toggle Button-->
+        <div class="button-container clearfix"><div class="menu-toggle flaticon-menu10"></div></div>
+
+        <!--Menu Box-->
+        <div class="menu-box">
+        	<!--Logo-->
+			<br>
+        	<div class="logo text-right"><a href="#"><img src="images/Screenshot_2.jpg" alt=""></a></div>
+
+            <!--Sticky Menu-->
+            <nav class="sticky-menu">
+            	<ul>
+
+                	<li class="current"><a href="#introduction">Introduction <span class="fa fa-arrow-right"></span></a></li>
+                    <li><a href="#html-structure">Assets <span class="fa fa-arrow-right"></span></a></li>
+                    <li><a href="#portal">portal <span class="fa fa-arrow-right"></span></a></li>
+                    <br>
+                    
+                    <h2 class="text-center text-dark" >Adminstrator</h2>
+                    <hr style="border-top: 1px solid black ; margin:10px 0 15px 0;"></hr>
+                    <li><a href="#Admin-Dashboard">Dashboard <span class="fa fa-arrow-right"></span></a></li>
+                    <li><a href="#create-user">Create User <span class="fa fa-arrow-right"></span></a></li>
+					<li><a href="#change-properties">Change Properties  <span class="fa fa-arrow-right"></span></a></li>
+                    <h2 class="text-center text-dark" style="margin-top:30px;">Employee</h2>
+                    <hr style="border-top: 1px solid black ; margin:10px 0 15px 0;"></hr>
+                    <li><a href="#application-history">Dashboard<span class="fa fa-arrow-right"></span></a></li>
+                    <li><a href="#create-application">Create Application <span class="fa fa-arrow-right"></span></a></li>
+                    <h2 class="text-center text-dark" style="margin-top:30px;">Others</h2>
+                    <hr style="border-top: 1px solid black ; margin:10px 0 15px 0;"></hr>
+                    <li><a href="#mailsystem">Mail System <span class="fa fa-arrow-right"></span></a></li>
+                    <li><a href="#securityfeatures">Security features <span class="fa fa-arrow-right"></span></a></li>
+					<li><a href="#installation">Local deployment<span class="fa fa-arrow-right"></span></a></li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </aside>
+
+    <div id="content-section">
+
+        <!--Introduction Section-->
+        <section class="section introduction" id="introduction">
+        	<!-- <div class="sec-title">
+            	<span class="icon fa fa-windows"></span>
+                <h2>Intoduction</h2>
+            </div> -->
+
+            <br>
+            <div class="sec-content">
+            	<h2>Time Off</h2>
+                <h3>- Designed for PHP developer assignment</h3>
+
+                <div class="separator"></div>
+
+                <strong>Created : </strong> 29/04/2021<br>
+                <strong>By : </strong> Thanos Kipriadis<br>
+                <strong>Email : </strong> <a href="mailto:t.kipriadis.com">t.kipriadis@gmail.com</a> <br>
+                <br>
+
+                <h3 class="content-title">Features</h3>
+                <br />
+                <ul class="checkbox">
+                    <li>Javascript</li>
+                    <li>HTML5 & CSS3 </li>
+                    <li>PHP version: 7.4.16</li>
+                    <li>Bootstrap 4.3.1 </li>
+                    <li>Jquery 3.5.1</li>
+                    <li>MariaDB 10.4.18</li>
+                    <li>Fully Responsive</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!--HTML Structure-->
+        <section class="section html-structure" id="html-structure">
+        	<div class="sec-title">
+            	<span class="icon fa fa-th-large"></span>
+                <h2>Assets</h2>
+            </div>
+            <br>
+            <div class="sec-content">
+
+                <h3 class="content-title">CSS</h3>
+                <p><i class="fa fa-check-square-o"></i> Stylesheet at path public_html/css/indexstyle.css used for portal page index.html .</p>
+                <p><i class="fa fa-check-square-o"></i> Stylesheet at path public_html/css/dashboard.css used for the rest of the pages .</p>
+                <br>
+                <h3 class="content-title">Javascript</h3><!-- /.content-title -->
+                <p><i class="fa fa-check-square-o"></i> Custom script at path public_html/js/custom.js is used for responsiveness for employee and adminstrator dashboards.</p>
+                <p><i class="fa fa-check-square-o"></i> function myFunction() is inserted to adminstratordashboard.php and employeedashboard.php on keyup to search bar.It is responsible for searching throught cards for a specific user or a past application.</p>
+                <p><i class="fa fa-check-square-o"></i> When an adminstrator clicks a user card there is a $(".card").click(function(event){} where the specific card title/subtiles innerTexts are submitted through a hidden form with id="propertiesform" to propertiespage.php.</p>
+                <p><i class="fa fa-check-square-o"></i> When a user submits an application at createapplication.php function validateForm() add to prevent Vacation End period being identical or sooner than vacation start period</p>
+                <br />
+
+            </div>
+
+        </section>
+        <section class="section html-structure" id="portal">
+        	<div class="sec-title">
+            	<span class="icon fa fa-th-large"></span>
+                <h2>Portal</h2>
+            </div>
+            <br>
+            <div class="sec-content">
+
+                <h3 class="content-title">CSS</h3>
+                <p><i class="fa fa-check-square-o"></i> User email and hashed_password is authenticated</p>
+                <p><i class="fa fa-check-square-o"></i> After succesfull authentication user_type is check . Depending on its value user is headed to Employee or Adminstrator Dashboard</p>
+                <p><i class="fa fa-check-square-o"></i> $_SESSION variables are being set after successfull authentication</p>
+                <img src="images/Screenshot_4.jpg">
+            </div>
+
+        </section>
+
+        <!--CSS Structure-->
+        <section class="section css-structure" id="Admin-Dashboard">
+        	<div class="sec-title">
+            	<span class="icon fa fa-at"></span>
+                <h2>Admin Dashboard</h2>
+            </div>
+
+            <br>
+            <div class="sec-content">
+
+				<p ><i class="fa fa-check-square-o"></i> List of users is generated through a for loop for every result of  query ('SELECT * FROM users') at table users.</p>
+
+                <p><i class="fa fa-check-square-o"></i>On page request all $_SESSION[''] variables must be validated , those are assigned upon successfull identification at portal.Also $_SESSION['user_type'] is also validated so that Employees cant access Admin Dashboard and the opposite</p>
+                <br>
+
+
+                <p><strong>Those are required php files </strong></p>
+                <p><i class="fa fa-check-square-o"></i> require config.php (Db configuration using PDO)</p>
+                <p><i class="fa fa-check-square-o"></i> require CSRFgeneratetoken.php (For csrf token generation.It fires up at every refresh generating a new token each time . Stored as $_SESSION variable and compared with the token from POST/GET form requests)</p>
+                <p><i class="fa fa-check-square-o"></i> require CSRFvalidatetoken.php (For csrf token validation to post / get requests. Validation doesnt happen if $_POST or $_GET request is empty)</p>
+                <p><i class="fa fa-check-square-o"></i> require filter.php (Filters $_GET / $_POST variables of html tags / special characters)</p>
+
+                <br />
+                <img src="images/Screenshot_1.jpg">
+            </div>
+
+        </section>
+
+        <!--Javascript-->
+        <section class="section javascript" id="create-user">
+        	<div class="sec-title">
+            	<span class="icon fa fa-code"></span>
+                <h2>Create User</h2>
+            </div>
+
+            <br>
+            <div class="sec-content">
+                <br>
+                <p><i class="fa fa-check-square-o"></i> On page request all $_SESSION[''] variables must be validated , those are assigned upon successfull identification at portal.Also $_SESSION['user_type'] is also validated so that Employees cant access Admin Dashboard and the opposite</p>
+				<p><i class="fa fa-check-square-o"></i> Password and Confirm passwords are checked to be equal otherwise inform user</p>
+        <p><i class="fa fa-check-square-o"></i> If every field posted and email is not already registered user is inserted to the system</p>
+        <p><i class="fa fa-check-square-o"></i> Passwords are hashed before insertion to database</p>
+        <br>
+
+        <p><strong>Those are required php files </strong></p>
+        <p><i class="fa fa-check-square-o"></i> require config.php (Db configuration using PDO)</p>
+        <p><i class="fa fa-check-square-o"></i> require CSRFgeneratetoken.php (For csrf token generation.It fires up at every refresh generating a new token each time . Stored as $_SESSION variable and compared with the token from POST/GET form requests)</p>
+        <p><i class="fa fa-check-square-o"></i> require CSRFvalidatetoken.php (For csrf token validation to post / get requests. Validation doesnt happen if $_POST or $_GET request is empty)</p>
+        <p><i class="fa fa-check-square-o"></i> require filter.php (Filters $_GET / $_POST variables of html tags / special characters)</p>
+        <p><i class="fa fa-check-square-o"></i> User notified for the outcome of his action . Variable name : $e_msg</p>
+            </div>
+
+        </section>
+
+        <!--Map Settings-->
+        <section class="section map-settings" id="change-properties">
+            <div class="sec-title">
+                <span class="icon fa fa-map-marker"></span>
+                <h2>Change Properties</h2>
+            </div>
+
+            <br>
+            <div class="sec-content">
+
+              <br>
+              <p><i class="fa fa-check-square-o"></i> On page request all $_SESSION[''] variables must be validated , those are assigned upon successfull identification at portal.Also $_SESSION['user_type'] is also validated so that Employees cant access Admin Dashboard and the opposite</p>
+      <p><i class="fa fa-check-square-o"></i> Password and Confirm passwords are checked to be equal otherwise inform user</p>
+      <p><i class="fa fa-check-square-o"></i> Form can be submitted can also be submitted without changing the password of the user</p>
+      <p><i class="fa fa-check-square-o"></i> Passwords are hashed before insertion to database</p>
+      <p><i class="fa fa-check-square-o"></i> Update user 's properties are inserted to the database . Also they are POSTED back to propertiespage.php so that can be changed again!</p>
+      <p><i class="fa fa-check-square-o"></i> User notified for the outcome of his action . Variable name : $e_msg</p>
+      <p><i class="fa fa-check-square-o"></i> User is identified with his id , which is POSTED from adminstrator.php and saved to a SESSION variable .  </p>
+      <br>
+
+
+
+                <br>
+                <p><strong>Those are required php files </strong></p>
+                <p><i class="fa fa-check-square-o"></i> require config.php (Db configuration using PDO)</p>
+                <p><i class="fa fa-check-square-o"></i> require CSRFgeneratetoken.php (For csrf token generation.It fires up at every refresh generating a new token each time . Stored as $_SESSION variable and compared with the token from POST/GET form requests)</p>
+                <p><i class="fa fa-check-square-o"></i> require CSRFvalidatetoken.php (For csrf token validation to post / get requests. Validation doesnt happen if $_POST or $_GET request is empty)</p>
+                <p><i class="fa fa-check-square-o"></i> require filter.php (Filters $_GET / $_POST variables of html tags / special characters)</p>
+
+            </div>
+
+        </section>
+
+        <!--Sources and Credits-->
+        <section class="section tutorial" id="application-history">
+            <div class="sec-title">
+                <span class="icon fa fa-credit-card"></span>
+                <h2>Dashboard</h2>
+            </div>
+
+            <br>
+            <div class="sec-content">
+
+              <p><i class="fa fa-check-square-o"></i> On page request all $_SESSION[''] variables must be validated , those are assigned upon successfull identification at portal.Also $_SESSION['user_type'] is also validated so that Employees cant access Admin Dashboard and the opposite</p>
+              <p><i class="fa fa-check-square-o"></i> List of users is generated through a for loop for every result of query ('SELECT * FROM applications') at table applications.</p>
+              <br>
+              <p><strong>Those are required php files </strong></p>
+              <p><i class="fa fa-check-square-o"></i> require config.php (Db configuration using PDO)</p>
+              <p><i class="fa fa-check-square-o"></i> require CSRFgeneratetoken.php (For csrf token generation.It fires up at every refresh generating a new token each time . Stored as $_SESSION variable and compared with the token from POST/GET form requests)</p>
+              <p><i class="fa fa-check-square-o"></i> require CSRFvalidatetoken.php (For csrf token validation to post / get requests. Validation doesnt happen if $_POST or $_GET request is empty)</p>
+              <p><i class="fa fa-check-square-o"></i> require filter.php (Filters $_GET / $_POST variables of html tags / special characters is modified to allow spaces)</p>
+            </div>
+          <img src="images/Screenshot_3.jpg">
+        </section>
+
+        <!--Sources and Credits-->
+        <section class="section sources-credits" id="create-application">
+          <div class="sec-title">
+              <span class="icon fa fa-credit-card"></span>
+              <h2>Create Application</h2>
+          </div>
+
+          <br>
+          <div class="sec-content">
+
+            <p><i class="fa fa-check-square-o"></i> On page request all $_SESSION[''] variables must be validated , those are assigned upon successfull identification at portal.Also $_SESSION['user_type'] is also validated so that Employees cant access Admin Dashboard and the opposite</p>
+            <p><i class="fa fa-check-square-o"></i> Create application form is submitted to employeedashboard.php with a POST request.</p>
+            <p><i class="fa fa-check-square-o"></i> Added a validateForm(){} function that allows submition when (date_from < date_to)</p>
+            <br>
+            <p><strong>Those are required php files </strong></p>
+            <p><i class="fa fa-check-square-o"></i> require config.php (Db configuration using PDO)</p>
+            <p><i class="fa fa-check-square-o"></i> require CSRFgeneratetoken.php (For csrf token generation.It fires up at every refresh generating a new token each time . Stored as $_SESSION variable and compared with the token from POST/GET form requests)</p>
+            <p><i class="fa fa-check-square-o"></i> require CSRFvalidatetoken.php (For csrf token validation to post / get requests. Validation doesnt happen if $_POST or $_GET request is empty)</p>
+            <p><i class="fa fa-check-square-o"></i> require filter.php (Filters $_GET / $_POST variables of html tags / special characters is modified to allow spaces)</p>
+          </div>
+        </section>
+
+        <!--Support-->
+        <section class="section support" id="mailsystem">
+        	<div class="sec-title">
+            	<span class="icon fa fa-support"></span>
+                <h2>Mail System</h2>
+            </div>
+
+            <br>
+            <div class="sec-content">
+              <p><strong>I used an no-reply-gmail that is placed between users_email and admins_email . Depending on the circumastances , sends email to inform user about the outcome or to send a reject/accept link to the Supervisor</strong></p>
+              <br>
+                <p><strong>For allowing to use mail() php inbuild function with XAMP we have to set these variables at sendemail.ini file </strong></p>
+                  <p><i class="fa fa-check-square-o"></i> smtp_server=smtp.gmail.com</p>
+                  <p><i class="fa fa-check-square-o"></i> smtp_port=587</p>
+                  <p><i class="fa fa-check-square-o"></i> smtp_ssl=auto</p>
+                  <p><i class="fa fa-check-square-o"></i> error_logfile=error.log</p>
+                  <p><i class="fa fa-check-square-o"></i> auth_username=//yourgmail</p>
+                  <p><i class="fa fa-check-square-o"></i> auth_password=//yourgmail password </p>
+                  <p><strong>Also set these variables at php.ini file  </strong></p>
+                    <p><i class="fa fa-check-square-o"></i> SMTP=smtp.gmail.com</p>
+                    <p><i class="fa fa-check-square-o"></i> smtp_port=587</p>
+                    <p><i class="fa fa-check-square-o"></i> sendmail_from = //yourgmail</p>
+                    <p><i class="fa fa-check-square-o"></i> sendmail_path = "\"C:\xampp\sendmail\sendmail.exe\" -t"  //your path to sendemail.exe file</p>
+                    <br>
+                    <p><strong>Remember to change your security option from gmail console to allow third parties to send emails in its behalf</strong></p>
+                    <p><strong>You can change it here Link ----><a ref="https://myaccount.google.com/lesssecureapps?">https://myaccount.google.com/lesssecureapps?</a> , you must be logged in at your gmail</strong></p>
+
+            </div>
+
+        </section>
+        <!--Support-->
+        <section class="section support" id="securityfeatures">
+          <div class="sec-title">
+              <span class="icon fa fa-support"></span>
+                <h2>Security Features</h2>
+            </div>
+            <br>
+            <p><i class="fa fa-check-square-o"></i>Accept/Reject link is sended with a email_handler variable , randomly created and inserted to database.Used for authentication of the current application.Also Supervisor must be verified from portal to use this feature!</p>
+            <p><i class="fa fa-check-square-o"></i>Passwords hashed </p>
+            <p><i class="fa fa-check-square-o"></i>Used PDO preventing SQL injections </p>
+            <p><i class="fa fa-check-square-o"></i>CSRFtoken authentication to every form / added expire-time to every token set to 1 hour </p>
+        </section>
+		
+		<section class="section support" id="installation">
+          <div class="sec-title">
+              <span class="icon fa fa-support"></span>
+                <h2>Installation on XAMP</h2>
+            </div>
+            <br>
+            <p><i class="fa fa-check-square-o"></i>Install XAMP</p>
+            <p><i class="fa fa-check-square-o"></i>Install Apache and mySQL services in your XAMP control panel</p>
+            <p><i class="fa fa-check-square-o"></i>Initiate Apache and mySQL services </p>
+            <p><i class="fa fa-check-square-o"></i>Open htdocs folder located inside the XAMP home directory</p>
+			<p><i class="fa fa-check-square-o"></i>Place Documentation and public_html files in htdocs folder</p>
+			<p><i class="fa fa-check-square-o"></i>At XAMP control panel click Admin button at mySQL module</p>
+			<p><i class="fa fa-check-square-o"></i>You can create a new database user and define its parameters or you can leave it default with username:root and without password</p>
+			<p><i class="fa fa-check-square-o"></i>Import database dump file at phpmyadmin panel file name ---->db_dump.sql</p>
+			<p><i class="fa fa-check-square-o"></i>Configure the email system described in previous section above</p>
+			<p><i class="fa fa-check-square-o"></i>You are ready to go . Open your browser and follow links : localhost/public_html and localhost/documentantion</p>
+        </section>
+
+    </div>
+
+
+</div>
+<!--End pagewrapper-->
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js	"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
