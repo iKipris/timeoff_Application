@@ -1,7 +1,7 @@
 Because passwords are hashed before inserted to database with php for first sign-in use:
 
-Supervisor----->email:t.kipriadis@gmail.com password:23102310
-Employe----->email:lefteris@gmail.com password:23102310
+Supervisor----->email:t.kipriadis@gmail.com password:####
+Employe----->email:lefteris@gmail.com password:####
 
 
 /////////////////////////////////////////////////////////
